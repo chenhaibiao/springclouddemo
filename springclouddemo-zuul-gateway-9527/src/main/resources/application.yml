@@ -25,8 +25,8 @@ zuul:
     mydept.path: /mydept/**
  
 info:
-  app.name: java3y-microcloud
-  company.name: www.java3y.com
+  app.name: springclouddemo-microcloud
+  company.name: demo
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 

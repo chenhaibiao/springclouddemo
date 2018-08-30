@@ -31,8 +31,8 @@ eureka:
     prefer-ip-address: true     #访问路径可以显示IP地址
       
 info:
-  app.name: java3y-springclouddemo
-  company.name: www.java3y.com
+  app.name: springclouddemo-provider-dept-8002
+  company.name: demo
   build.artifactId: $project.artifactId$
   build.version: $project.version$
       
