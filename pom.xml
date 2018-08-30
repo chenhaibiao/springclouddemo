@@ -91,21 +91,21 @@
 
 	<modules>
 		<module>springclouddemo-api</module>
-		<module>springclouddemo-provider-dept-8001</module>
-		<module>springclouddemo-consumer-dept-80</module>
-		<module>springclouddemo-eureka-7001</module>
-		<module>springclouddemo-eureka-7002</module>
-		<module>springclouddemo-eureka-7003</module>
-		<module>springclouddemo-provider-dept-8002</module>
-		<module>springclouddemo-provider-dept-8003</module>
-		<module>springclouddemo-consumer-dept-feign</module>
-		<module>springclouddemo-provider-dept-hystrix-8001</module>
-		<module>springclouddemo-consumer-hystrix-dashboard</module>
-		<module>springclouddemo-zuul-gateway-9527</module>
 		<module>springclouddemo-config-3344</module>
 		<module>springclouddemo-config-client-3355</module>
 		<module>springclouddemo-config-eureka-client-7001</module>
 		<module>springclouddemo-config-dept-client-8001</module>
+		<module>springclouddemo-consumer-dept-80</module>
+		<module>springclouddemo-consumer-dept-feign</module>
+		<module>springclouddemo-consumer-hystrix-dashboard</module>
+		<module>springclouddemo-eureka-7001</module>
+		<module>springclouddemo-eureka-7002</module>
+		<module>springclouddemo-eureka-7003</module>
+		<module>springclouddemo-provider-dept-8001</module>
+		<module>springclouddemo-provider-dept-8002</module>
+		<module>springclouddemo-provider-dept-8003</module>
+		<module>springclouddemo-provider-dept-hystrix-8001</module>
+		<module>springclouddemo-zuul-gateway-9527</module>
 	</modules>
 
 </project>
