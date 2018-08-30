@@ -7,11 +7,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * boot -->spring   applicationContext.xml --- @Configuration配置   ConfigBean = applicationContext.xml
+ */
 @Configuration
-public class ConfigBean //boot -->spring   applicationContext.xml --- @Configuration配置   ConfigBean = applicationContext.xml
-{
+public class ConfigBean {
+    /**
+     * Spring Cloud Ribbon是基于Netflix Ribbon实现的一套客户端       负载均衡的工具。
+     */
     @Bean
-    @LoadBalanced//Spring Cloud Ribbon是基于Netflix Ribbon实现的一套客户端       负载均衡的工具。
+    @LoadBalanced
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
@@ -23,11 +28,3 @@ public class ConfigBean //boot -->spring   applicationContext.xml --- @Configura
         return new RetryRule();
     }
 }
-
-//@Bean
-//public UserServcie getUserServcie()
-//{
-//	return new UserServcieImpl();
-//}
-// applicationContext.xml == ConfigBean(@Configuration)
-//<bean id="userServcie" class="com.demo.tmall.UserServiceImpl">

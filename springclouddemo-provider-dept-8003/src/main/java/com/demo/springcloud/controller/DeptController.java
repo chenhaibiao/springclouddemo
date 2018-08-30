@@ -11,32 +11,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.springcloud.entities.Dept;
+import com.demo.springcloud.entity.Dept;
 import com.demo.springcloud.service.DeptService;
 
 @RestController
-public class DeptController
-{
+public class DeptController {
+
 	@Autowired
 	private DeptService service;
+
 	@Autowired
 	private DiscoveryClient client;
 
 	@RequestMapping(value = "/dept/add", method = RequestMethod.POST)
-	public boolean add(@RequestBody Dept dept)
-	{
+	public boolean add(@RequestBody Dept dept) {
 		return service.add(dept);
 	}
 
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
-	public Dept get(@PathVariable("id") Long id)
-	{
+	public Dept get(@PathVariable("id") Long id) {
 		return service.get(id);
 	}
 
 	@RequestMapping(value = "/dept/list", method = RequestMethod.GET)
-	public List<Dept> list()
-	{
+	public List<Dept> list() {
 		return service.list();
 	}
 
@@ -48,8 +46,7 @@ public class DeptController
 
 		List<ServiceInstance> srvList = client.getInstances("SPRINGCLOUDDEMO-DEPT");
 		for (ServiceInstance element : srvList) {
-			System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t"
-					+ element.getUri());
+			System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t" + element.getUri());
 		}
 		return this.client;
 	}

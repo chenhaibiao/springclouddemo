@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.springcloud.entities.Dept;
+import com.demo.springcloud.entity.Dept;
 import com.demo.springcloud.service.DeptService;
 
 @RestController

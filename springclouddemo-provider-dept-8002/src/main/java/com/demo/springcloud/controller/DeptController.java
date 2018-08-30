@@ -1,6 +1,6 @@
 package com.demo.springcloud.controller;
 
-import com.demo.springcloud.entities.Dept;
+import com.demo.springcloud.entity.Dept;
 import com.demo.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,8 +12,10 @@ import java.util.List;
 
 @RestController
 public class DeptController {
+
     @Autowired
     private DeptService service;
+
     @Qualifier("discoveryClient")
     @Autowired
     private DiscoveryClient client;
@@ -42,8 +44,7 @@ public class DeptController {
 
         List<ServiceInstance> srvList = client.getInstances("SPRINGCLOUDDEMO-DEPT");
         for (ServiceInstance element : srvList) {
-            System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t"
-                    + element.getUri());
+            System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t" + element.getUri());
         }
         return this.client;
     }

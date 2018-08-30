@@ -1,6 +1,6 @@
 package com.demo.springcloud.controller;
 
-import com.demo.springcloud.entities.Dept;
+import com.demo.springcloud.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +38,9 @@ public class DeptController_Consumer {
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
     }
 
-    // 测试@EnableDiscoveryClient,消费端可以调用服务发现
+    /**
+     * 测试@EnableDiscoveryClient,消费端可以调用服务发现
+     */
     @RequestMapping(value = "/consumer/dept/discovery")
     public Object discovery() {
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);

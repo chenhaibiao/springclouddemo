@@ -1,6 +1,6 @@
 package com.demo.springcloud.service;
 
-import com.demo.springcloud.entities.Dept;
+import com.demo.springcloud.entity.Dept;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
